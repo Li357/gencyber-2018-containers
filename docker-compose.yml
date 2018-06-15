@@ -21,3 +21,12 @@ services:
       - "8002:80"
     volumes:
       - ./sudanesechildren:/usr/local/apache2/htdocs
+  internet:
+    image: node:latest
+    restart: always
+    ports:
+      - "8003:8000"
+    working_dir: /home/app
+    volumes:
+      - ./internet:/home/app
+    command: "npm start"
