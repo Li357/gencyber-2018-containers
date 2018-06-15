@@ -1,0 +1,189 @@
+<!Doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <style>
+      body
+      {
+        padding:          0px;
+        margin:           0px;
+        font-family:      "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size:        14px;
+        line-height:      1px;
+      }
+      body, html
+      {
+        height:           100%;
+      }
+
+      .bg
+      {
+        background-image: url("sudan.jpg");
+        height:           100%;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size:  cover;
+      }
+      h1,h2,h3
+      {
+        float:            top;
+        text-align:       center;
+        font-size:        150px;
+        color:            #FFFFFF;
+        line-height:      normal;
+      }
+      p
+      {
+        float:            top;
+        text-align:       center;
+        font-size:        100px;
+        color:            #FFFFFF;
+        line-height:      normal;
+      }
+      h5
+      {
+        color:            #FFFFFF;
+      }
+      .p
+      {
+        font-size:        25px;
+        bottom:           230px;
+        position:         fixed;
+        z-index:          3000;
+        color:            #FFFFFF;
+      }
+      ul
+      {
+        list-style-type:  none;
+        margin:           0;
+        padding:          0;
+        overflow:         hidden;
+        background-color: #000000;
+      }
+      li a
+      {
+        display:          inline-block;
+        color:            white;
+        text-align:       center;
+        padding:          14px 16px;
+        text-decoration:  none;
+        line-height:      30px;
+      }
+      li a:hover
+      {
+        background-color: #000000;
+      }
+      .normal
+      {
+        line-height:      normal;
+      }
+      .left
+      {
+        float:            left;
+        text-align:       center;
+      }
+      .right
+      {
+        float:            right;
+        text-align:       center;
+      }
+      h5
+      {
+        font-size:        10px;
+        bottom:           255px;
+        right:            1000px;
+        position:         fixed;
+        z-index:          3000;
+        color:            #142FDA;
+        cursor:           pointer;
+      }
+      form
+      {
+        font-size:        10px;
+        bottom:           230px;
+        right:            975px;
+        position:         fixed;
+        z-index:          3000;
+        color:            #142FDA;
+        cursor:           pointer;
+      }
+      .form
+        {
+          font-size:        10px;
+          bottom:           115px;
+          right:            980px;
+          position:         fixed;
+          z-index:          3000;
+          color:            #142FDA;
+          cursor:           pointer;
+        }
+      .button
+      {
+        font-size:        10px;
+        bottom:           115px;
+        right:            1075px;
+        position:         fixed;
+        z-index:          3000;
+        cursor:           pointer;
+      }
+      .hidden
+      {
+        display:          none;
+      }
+    </style>
+    <script>
+    var click = 0;
+    function hide()
+    {
+      if(click < 2)
+      {
+        var item = document.getElementById("Report");
+        item.classList = "";
+      }
+      else
+      {
+        var item = document.getElementById("Report");
+        item.classList = "hidden";
+      }
+      click = click + 1;
+      if(click > 3)
+      {
+        click = 0;
+      }
+    }
+    </script>
+  </head>
+  <body class="bg">
+    <nav class="navbar">
+      <div class="container-fluid main-bar">
+        <ul class="nav navbar-nav main-nav">
+          <li class="nav-item left"><a href="index.html">Sudn Childrn Foundaytion</a></li>
+          <li class="nav-item active right">
+            <a class="nav-link" href="Abt.html">Abt</a>
+          </li>
+          <li class="nav-item active right">
+            <a class="nav-link" href="DONATE2DAT.html">DONATE 2DAY</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="wrapper">
+      <h1>Thank you for your donation.
+      <br>It was much appreciated.</h1>
+      <h5 onclick="hide()"><u> </u></h5>
+      <div class="hidden" id="Report">
+        <p class="p">The following money will be donated to what is selected in the box. If you want to change where you are donating to, please reselect in the dropdown box. Then press Submit to confirm.</p>
+        <form>
+          <select>
+            <option>flag{Sudanese_Military}</option>
+            <option>flag{Sudanese_Government}</option>
+            <option>flag{Sudanese_Children}</a></option>
+          </select>
+        </form>
+        <button onclick="theFunction" class="button"><a href="error.thml">Submit</a></button>
+      </div>
+    </div>
+  </body>
+</html>

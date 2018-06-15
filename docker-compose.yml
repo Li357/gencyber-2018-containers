@@ -14,3 +14,10 @@ services:
       - "8001:80"
     volumes:
       - ./md5hasher:/var/www/html
+  sudanesechildren:
+    image: httpd:latest
+    restart: always
+    ports:
+      - "8002:80"
+    volumes:
+      - ./sudanesechildren:/usr/local/apache2/htdocs
