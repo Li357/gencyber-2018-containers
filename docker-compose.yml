@@ -1,0 +1,16 @@
+version: "3"
+services:
+  fileserver:
+    image: php:7.2.6-apache
+    restart: always
+    ports:
+      - "8000:80"
+    volumes:
+      - ./fileserver:/var/www/html
+  md5hasher:
+    image: php:7.2.6-apache
+    restart: always
+    ports:
+      - "8001:80"
+    volumes:
+      - ./md5hasher:/var/www/html
