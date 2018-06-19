@@ -30,3 +30,10 @@ services:
     volumes:
       - ./internet:/home/app
     command: "npm start"
+  saudi:
+    image: httpd:latest
+    restart: always
+    ports:
+      - "8004:80"
+    volumes:
+      - ./saudi:/usr/local/apache2/htdocs
